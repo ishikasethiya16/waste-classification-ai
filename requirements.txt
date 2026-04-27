@@ -1,4 +1,5 @@
 streamlit
-numpy
+tensorflow==2.15.1
 pillow
-h5py
+numpy
+pandas
