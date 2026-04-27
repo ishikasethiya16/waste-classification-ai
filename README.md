@@ -1,6 +1,6 @@
 # AI Waste Classification System ♻️
 
-A complete end-to-end Deep Learning system that classifies waste into **Biodegradable**, **Non-Biodegradable**, and **Recyclable** categories using CNNs and Transfer Learning.
+A complete end-to-end Deep Learning system that classifies waste into **Biodegradable** and **Recyclable** categories using CNNs and Transfer Learning.
 
 ## 🚀 Features
 - **Dual Model Support**: Custom CNN and MobileNetV2 (Transfer Learning).
@@ -52,7 +52,6 @@ streamlit run app.py
 ## 💡 Smart Suggestions
 - **Biodegradable** → Compost (Green)
 - **Recyclable** → Recycle bin (Blue)
-- **Non-biodegradable** → Proper waste disposal (Red)
 
 ---
 Developed as a production-ready AI Waste Classification project.
