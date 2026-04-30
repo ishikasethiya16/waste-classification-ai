@@ -65,16 +65,17 @@ col1, col2 = st.columns([1, 1])
 
 with col1:
     st.subheader("Input Image")
+    uploaded_file = None
     if input_method == "Image Upload":
         uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
         if uploaded_file is not None:
             img = Image.open(uploaded_file)
-            st.image(img, caption='Uploaded Image', use_column_width=True)
+            st.image(img, caption='Uploaded Image', use_container_width=True)
     else:
         cam_image = st.camera_input("Take a photo")
         if cam_image is not None:
             img = Image.open(cam_image)
-            st.image(img, caption='Captured Image', use_column_width=True)
+            st.image(img, caption='Captured Image', use_container_width=True)
             uploaded_file = cam_image # Treat as uploaded for processing
 
 with col2:
@@ -112,7 +113,7 @@ with col2:
                 
                 # Dashboard Stats (Mock / Session State)
                 if 'stats' not in st.session_state:
-                    st.session_state.stats = {'Biodegradable': 0, 'Non-Biodegradable': 0, 'Recyclable': 0}
+                    st.session_state.stats = {'Biodegradable': 0, 'Recyclable': 0}
                 
                 st.session_state.stats[label] += 1
 
